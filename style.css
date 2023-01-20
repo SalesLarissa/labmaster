@@ -1,0 +1,70 @@
+.navbar{
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 20px;
+}
+.navbar img{
+    max-width: 90%;
+}
+.navbar_linkImg{
+    max-width: 15%;
+}
+@media (max-width: 600px) {
+    .navbar_linkImg{
+        max-width: 50%;
+    }
+}
+
+#capa {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    height: 60%;
+    padding-top: 10% !important;
+    margin-bottom: 02%;
+
+    background-image: url("assets/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+/*================SOBRE============*/
+#sobre{
+   padding: 0 1%;
+   text-align: center;
+}
+@media (max-width: 600px) {
+    #sobre{
+        padding: 0 3%;
+     }
+}
+.sobre_card{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.sobre_card h2{
+    font-size: 27px;
+}
+.card{
+    max-width: 30%;
+    min-width: 30%;
+
+}
+/*================SERVIÇOS============*/
+.carousel{
+    max-width: 25%;
+    float: left;
+}
+@media (max-width: 600px) {
+    .carousel{
+        max-width: 100%;
+    }
+
+    #servicos{
+        flex-direction: row-reverse;
+    }
+}
