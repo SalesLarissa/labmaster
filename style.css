@@ -1,70 +1,202 @@
-.navbar{
+/*=============RESET====================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Roboto:wght@300;400;700&display=swap');
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #F16136;
+}
+h2, .title_txt{
+    color: #F16136;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: thin;
+}
+hr{
+    width: 100%;
+    float: center;
+}
+.title_txt{
+    font-size: 30px;
+    font-weight: bold;
+}
+.content_floatLeft{
+    padding: 0 1%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+@media (max-width: 600px) {
+    .content_floatLeft{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+/*============NAVBAR==========================*/
+.navbar {
     padding-left: 1%;
     padding-right: 1%;
     font-size: 20px;
 }
-.navbar img{
+
+.navbar img {
     max-width: 90%;
 }
-.navbar_linkImg{
+
+.navbar_linkImg {
     max-width: 15%;
 }
+
 @media (max-width: 600px) {
-    .navbar_linkImg{
+    .navbar_linkImg {
         max-width: 50%;
     }
 }
+
+/*=============HOME=================*/
 
 #capa {
     width: 100%;
     position: relative;
     background-color: black;
-    height: 60%;
-    padding-top: 10% !important;
+    height: 90%;
     margin-bottom: 02%;
 
-    background-image: url("assets/banner.jpg");
+    background-image: url("assets/banner.png");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    opacity: 0.7;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#capa h1{
+    color: #F16136;
+    font-family: 'serif';
+    font-weight: bold;
+    font-size: 70px;
+}
+#capa p{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+#capa button{
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+#capa button:hover{
+    color: white;
+    background-color: black;
+}
+#capa img{
+    max-width: 30%;
 }
 
 /*================SOBRE============*/
-#sobre{
-   padding: 0 1%;
-   text-align: center;
+
+#sobre {
+    padding: 0 1%;
+    text-align: center;
 }
+
 @media (max-width: 600px) {
-    #sobre{
-        padding: 0 3%;
-     }
+    #sobre {
+        padding: unset;
+        flex-direction: column-reverse;
+        padding: 10% 0;
+    }
 }
-.sobre_card{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-}
-.sobre_card h2{
-    font-size: 27px;
-}
-.card{
+
+
+/*==========CARDS================*/
+
+.card {
     max-width: 30%;
     min-width: 30%;
-
 }
-/*================SERVIÇOS============*/
-.carousel{
-    max-width: 25%;
-    float: left;
+
+.sobre_card h2 {font-size: 27px;}
+
+.sobre_cards, .servicos_cards, .servicos2_cards, .servicos3_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servicos_card, .servicos2_card, .servicos3_cards {
+    max-width: 50% !important;
+    min-width: 50% !important;
+    background-color: #f4f4f4;
 }
 @media (max-width: 600px) {
-    .carousel{
-        max-width: 100%;
+    .servicos3_cards{
+        max-width: 100% !important;
     }
+}
+.servicos2_card{background-color: white !important;}
 
+/*==============IMG==================*/
+.imgContent_floatLeft{
+    position: relative;
+    max-width: 45%;
+    min-width: 600px;
+    height: 500px;
+
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 600px) {
+    .imgContent_floatLeft{
+        max-width: 100%;
+        min-width: unset;
+        height: 200px;
+    }
+}
+
+.img_sobre {
+    background-image: url('assets/1.jpeg');
+}
+/*Dimensional*/
+.img_servicos {
+    background-image: url('assets/2.jpeg');
+}
+/*Torque-pressão*/
+.img_servicos2 {
+    background-image: url('assets/2.jpg');
+}
+/*Area Quimica*/
+.img_servicos3 {
+    background-image: url('assets/1.jpg');
+}
+
+/*================SERVIÇOS============*/
+#servicos{
+    background-color: #f4f4f4;
+    gap:10% !important;
+}
+@media (max-width: 600px) {
     #servicos{
-        flex-direction: row-reverse;
+        gap: unset;
+    }
+}
+#servicos_2{
+    gap: 22%;
+}
+@media (max-width: 600px) {
+    #servicos_2{
+        flex-direction: column-reverse;
+        padding: 10% 0;
     }
 }
