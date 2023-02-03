@@ -1,26 +1,33 @@
 /*=============RESET====================*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Roboto:wght@300;400;700&display=swap');
-h1{
+
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #F16136;
 }
-h2, .title_txt{
+
+h2, .title_txt {
     color: #F16136;
 }
-p{
+
+p {
     font-family: 'Montserrat', sans-serif;
     font-weight: thin;
+
 }
-hr{
+
+hr {
     width: 100%;
     float: center;
 }
-.title_txt{
+
+.title_txt {
     font-size: 30px;
     font-weight: bold;
 }
-.content_floatLeft{
+
+.content_floatLeft {
     padding: 0 1%;
     text-align: center;
 
@@ -28,12 +35,17 @@ hr{
     flex-direction: row;
     gap: 2%;
 }
+
 @media (max-width: 600px) {
-    .content_floatLeft{
+    .content_floatLeft {
         display: flex;
         flex-direction: column;
 
     }
+}
+
+section {
+    min-height: 400px;
 }
 
 /*============NAVBAR==========================*/
@@ -79,29 +91,38 @@ hr{
     align-items: center;
 }
 
-#capa h1{
+#capa h1 {
     color: #F16136;
     font-family: 'serif';
     font-weight: bold;
     font-size: 70px;
 }
-#capa p{
+
+#capa p {
     color: black;
     font-weight: bold;
     font-size: 30px;
 }
-#capa button{
+
+#capa button {
     color: black;
     border: 2px solid black;
     font-weight: bold;
 }
 
-#capa button:hover{
+#capa button:hover {
     color: white;
     background-color: black;
 }
-#capa img{
+
+#capa img {
     max-width: 30%;
+}
+
+@media (max-width: 600px) {
+    #capa img {
+        max-width: 50%;
+    }
 }
 
 /*================SOBRE============*/
@@ -127,38 +148,55 @@ hr{
     min-width: 30%;
 }
 
-.sobre_card h2 {font-size: 27px;}
+.card-body {
+    padding: unset !important;
+}
 
-.sobre_cards, .servicos_cards, .servicos2_cards, .servicos3_cards {
+.sobre_card h2 {
+    font-size: 27px;
+}
+
+.sobre_cards,
+.servicos_cards,
+.servicos2_cards,
+.servicos3_cards {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.servicos_card, .servicos2_card, .servicos3_cards {
+.servicos_card,
+.servicos2_card,
+.servicos3_cards {
     max-width: 50% !important;
     min-width: 50% !important;
     background-color: #f4f4f4;
 }
+
 @media (max-width: 600px) {
-    .servicos3_cards{
+    .servicos3_cards {
         max-width: 100% !important;
     }
 }
-.servicos2_card{background-color: white !important;}
+
+.servicos2_card {
+    background-color: white !important;
+}
+
 
 /*==============IMG==================*/
-.imgContent_floatLeft{
+.imgContent_floatLeft {
     position: relative;
     max-width: 45%;
     min-width: 600px;
-    height: 500px;
+    height: auto;
 
     background-position: center;
     background-size: cover;
 }
+
 @media (max-width: 600px) {
-    .imgContent_floatLeft{
+    .imgContent_floatLeft {
         max-width: 100%;
         min-width: unset;
         height: 200px;
@@ -168,35 +206,45 @@ hr{
 .img_sobre {
     background-image: url('assets/1.jpeg');
 }
+
 /*Dimensional*/
 .img_servicos {
     background-image: url('assets/2.jpeg');
 }
+
 /*Torque-pressão*/
 .img_servicos2 {
     background-image: url('assets/2.jpg');
 }
+
 /*Area Quimica*/
 .img_servicos3 {
     background-image: url('assets/1.jpg');
 }
 
 /*================SERVIÇOS============*/
-#servicos{
+#servicos {
     background-color: #f4f4f4;
-    gap:10% !important;
+    gap: 10% !important;
 }
+
 @media (max-width: 600px) {
-    #servicos{
+    #servicos {
         gap: unset;
     }
 }
-#servicos_2{
+
+#servicos_2 {
     gap: 22%;
 }
+
 @media (max-width: 600px) {
-    #servicos_2{
+    #servicos_2 {
         flex-direction: column-reverse;
         padding: 10% 0;
     }
+}
+
+.servicos_content h1 {
+    font-size: 30px;
 }
